@@ -1,0 +1,79 @@
+#include<iostream>
+using namespace std;
+
+// array reversing program
+void rvereseArray(int arr[], int start, int end)
+{
+    while (start < end)
+    {
+        int temp = arr[start];
+        arr[start] = arr[end];
+        arr[end] = temp;
+        start++;
+        end--;
+    }
+}  
+int* coutt(int arr[],int n)
+{
+     int ar1[n];
+     
+     // creating vopy of orignal array
+     
+     cout<<"orignal array without any change  : ";
+    for(int i=0;i<n;i++)
+{
+    
+   
+    cout<<arr[i]<<" ";
+       
+       ar1[i]=arr[i];
+       
+       
+}
+     // print new reverse  array 
+   cout<<endl;
+   int n1=sizeof(ar1)/sizeof(ar1[0]);
+   rvereseArray( ar1,0, n1-1);
+   cout<<"clone and reversed array          : ";
+     for(int j=0;j<n;j++)
+   {
+       cout<<ar1[j]<<" ";
+       
+       
+       
+       
+       
+   }
+    
+  return arr;  
+    
+}
+
+
+
+int main()
+{
+     int size;
+    int l=1;
+    cout<<"plz enter the size of array  :";
+    cin>>size;
+    int n;
+    const int n1=size;
+    int arr[n1];
+    n=sizeof(arr)/sizeof(arr[0]);
+    for(int i=0;i<n;i++)
+    {
+        
+          cout<<"enter the "<<l  << " element value here :";
+        cin>>arr[i];
+    
+        l++;
+    }
+  
+    
+    int* newArr=coutt(arr,n);
+    
+    
+    
+    
+}

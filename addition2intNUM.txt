@@ -1,0 +1,25 @@
+#include<iostream>
+using namespace std;
+void add(int ,int);// here am just declaring function which take to agruments of int type
+
+int main()
+{
+    
+    int a,b;
+    cout<<"enter two values to add them together";
+    cin>>a>>b;
+    add(a,b);// here i am using that function
+    
+    
+    
+}
+
+void add(int a, int b)// here down am making funtion how should it work
+{
+    int result;
+    result=a+b;
+    cout<<result;
+    
+    
+    
+}

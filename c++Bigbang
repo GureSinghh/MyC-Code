@@ -1,0 +1,142 @@
+#include<iostream>
+using namespace std;
+
+
+//******************************************************************base class************************************************
+class student
+{
+  private: 
+  string studentName;
+ int stuEnrollyear;
+   
+   public:
+// constructor
+    student()
+    {
+        
+    }
+//setting variable to specific value holder variables
+   student(string studentName,int stuEnrollyear)
+   {
+       studentName=studentName;
+       stuEnrollyear=stuEnrollyear;
+       
+   }
+//creating get name function
+    string Getname()
+   {
+      return studentName;
+   }
+// creating getEnrollmentyear function
+   int GetEnrollmentyear()
+    {
+       return stuEnrollyear;
+    }   
+//setting name function
+  void setName(string name)
+  {
+      studentName=name;
+  }
+// setting Entrollyear function
+  void setEnrollyear(int entrollmentYear)
+  {
+      stuEnrollyear=entrollmentYear;
+  }
+  
+    
+   
+    
+    // distructor
+    ~student()
+    {
+        
+    }
+     virtual void print()
+    {
+        cout <<"StudentNAME : "<<studentName<<endl<<"EnrollmentYEAR : "<<stuEnrollyear <<endl;
+    }
+    
+};
+//******************************************************subclass inherited from the base class***************************************************************************
+class KpuStudent:public student
+{
+    private:
+          string campusLocation;
+          
+     public: KpuStudent(string studentName,int stuEnrollyear,string campusLocation);     
+               
+            student(string studentName,int stuEnrollyear)  
+               {
+                    campusLocation=campusLocation;
+                }    
+// getting campuslocation using getfunction
+                string getcampslocation()
+                    {
+                        return campusLocation;
+                     }   
+                
+//setting campuslocation using setfunction
+  void setcampuslocation(string location)
+  {
+      campusLocation=location;
+  }
+                
+                
+      virtual void print()
+    {
+        cout <<"studentName : "<<Getname()<<endl<<"CampusLocation :"<<campusLocation <<endl;
+    }
+    
+    
+};
+//********************************************************second subclass inherited from the base class **************************************************************
+class HogwartsStudent:public student
+{
+private:
+     string houseAffiliation;
+     
+ public: HogwartsStudent(string studentName,int stuEnrollyear,string houseAffiliation);
+ 
+           student(string studentName,int stuEnrollyear)  
+               {
+                    
+                   houseAffiliation=houseAffiliation;
+                }   
+//
+string getHouseAffiliation() {
+return houseAffiliation;
+}
+    
+//
+void setHouseAffiliation(string houseAffiliation) {
+   houseAffiliation = houseAffiliation;
+}
+//
+    
+   virtual void print()
+    {
+        cout <<"StudentNAME : "<<Getname()<<endl<<"houseAffiliation  : "<<houseAffiliation <<endl;
+    }  
+    
+    
+    
+};
+
+int main()
+{
+   student s1=student("Pritpal Singh",2021);
+   KpuStudent s2=KpuStudent("Pritpal Singh",2021,"surry");
+       HogwartsStudent s3=HogwartsStudent("Pritpal Singh",2021,"Ravenclaw");
+       
+       
+       student *stdnt[3];
+       stdnt[0]=&s1;
+       stdnt[1]=&s2;
+       stdnt[2]=&s3;
+       
+      for(int i = 0; i < 3; i++) {
+       stdnt[i]->print();
+}
+   
+    
+}

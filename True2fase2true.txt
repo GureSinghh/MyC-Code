@@ -1,0 +1,38 @@
+#include <iostream>
+using namespace std;
+
+//turn true 2 false and false to true 
+bool turnTrue(bool a)
+{
+  if(a==false)
+  {
+      a=true;
+      
+  }else
+  {
+      a=false;
+  }
+ return a;
+}
+
+
+
+int main()
+{ 
+  bool turn=false;
+  
+ turn= turnTrue(turn);
+ 
+  
+  if(turn==false)
+  {
+      cout<<"yes it is false";
+  }else{
+      cout<<"no it is true : "<<endl;
+  }
+ turn= turnTrue(turn);
+ if(turn==true)
+ cout<<"it is true"<<endl;
+ else
+     cout<<"false"<<endl;
+} 

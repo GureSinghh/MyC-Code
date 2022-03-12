@@ -1,0 +1,50 @@
+#include<iostream>
+using namespace std;
+class Cylinder{
+    // creating private member variables 
+    private: int radius,height;
+            
+    public:
+// using set() to assign the value to the private variables      
+ set(int x,int y)
+    {
+        radius=x;
+        height=y;
+        
+    }
+    // running that getVolume() funvtion using Get()
+    get()
+    {
+        getvolume();
+    }
+    
+    // creating getvolume function to calculate the volume of Cylinder 
+    int getvolume()
+    {
+        cout<<"volume of Cylinder is  :";
+     // storing the calulation of volume of Cylinder inside the Volume variable
+       int volume=3.14159*radius*radius*height;
+         return volume; 
+         
+    }
+    
+};
+
+
+
+
+int main()
+{
+    //creating two variable to store the radius and height value inside it.
+    int a,b;
+    cout<<"please enter the radius value of Cylinder: ";
+    cin>>a;// getting radius input from user 
+    cout<<"please enter the height value of Cylinder: ";
+    cin>>b;// getting height input from user
+  Cylinder obj;// creating an object of class
+obj.set(a,b);//setting values to the radius and height private members using set() function
+
+cout<<obj.get();  //getting output usingt get() function.
+    
+    
+}

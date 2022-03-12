@@ -1,0 +1,54 @@
+Resource commands
+
+start [resourceName]
+stop [resourceName]
+ensure [resourceName]
+restart [resourceName]
+refresh
+Global commands
+
+exec [filename]
+quit
+quit [reason]
+Management commands
+
+status
+clientkick [id] [reason]
+say [message]
+svgui
+Configuration variables
+
+gamename [game]
+
+Supported games
+onesync [on/off/legacy]
+
+sv_enforceGameBuild [build]
+
+sv_maxClients [newValue]
+
+sv_endpointPrivacy [newValue]
+
+sets sv_projectName "project name"
+
+sets sv_projectDesc "project description"
+
+sv_hostname [newValue]
+
+sv_authMaxVariance [newValue]
+
+sv_authMinTrust [newValue]
+
+load_server_icon [fileName.png]
+
+rcon_password [password]
+
+steam_webApiKey [key]
+
+Access control commands
+
+add_ace [principal] [object] [allow|deny]
+add_principal [child_principal] [parent_principal]
+remove_ace [principal] [object] [allow|deny]
+remove_principal [child_principal] [parent_principal]
+test_ace [principal] [object]

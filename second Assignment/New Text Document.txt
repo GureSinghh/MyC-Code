@@ -1,0 +1,52 @@
+#include<iostream>
+using namespace std;
+
+void reverse(int)
+{
+    
+    
+}
+
+int main()
+{//////////////////////////////////////////////////////////////////////////////////////////////////////
+    int init,endLImit;
+    cout<<"plz enter the initial value but it should be greater than or equal to 10"<<endl;
+    cin>>init;
+   
+    
+  if(init<10)
+  {
+      cout<<"plz read the first massage carefully with your pair of eyes";
+  } else
+  {
+       cout<<endl<<"plz enter the End limit value here "<<endl;
+    cin>>endLImit;
+      if(endLImit<=init)
+      {
+          
+          cout<<"plz enter the greater value than first value";
+      }
+  } 
+  ///////////////////////////////////////////////////////////////////////////////////
+  
+  for(int i=init;i<=endLImit;i++)
+  {
+      
+      cout<<init<<endl;
+      init++;
+  }
+  
+  
+  
+  
+}
+  
+  void reverse(int a)
+  {
+      int temp=a;
+      int temp1=a;
+      
+      
+      
+      
+  }

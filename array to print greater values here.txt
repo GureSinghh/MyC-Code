@@ -1,0 +1,32 @@
+//pritpal Singh 
+#include<iostream>
+using namespace std;
+  
+int printgreaterNum(int num);  
+  
+  
+int main()
+{
+    int i;     // i variable for using as condition value in for loop
+    int n;     // n variable to store input form user 
+  const  int size=20;  // constant size for array
+
+   int arr[size]={1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20};  // array size of 20 with 20 elements in it;
+   cout<<"this program will print greater values then your input in between 1 to 20   \n\n"<<"Enter the number between 1 to 20 here :-";
+     cin>>n;
+     
+          
+          
+              for(i=n;i<=19;i++)
+              {
+                  cout<<arr[n]  <<endl;
+                  n++;
+              }
+              
+          
+        
+    
+    
+}
+
+

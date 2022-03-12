@@ -1,0 +1,45 @@
+#include<iostream>
+using namespace std;
+
+
+
+int main()
+{
+    
+   
+  int inti;
+  cout<<"pls enter the intial value in double digits"<<endl;
+  cin>>inti;
+  
+  int endA;
+  
+
+  /////////////////////////////////////////////////////////////////////getting input from user with some conditions
+  if(inti<10)
+  {
+      
+      
+      cout<<"this value is not allowed plz read the first massage again carefully using your eyes";
+      
+  }else 
+  {
+      
+        cout<<"pls enter the last value here"<<endl;
+  cin>>endA;
+    if(endA<=inti)
+  {
+      cout<<"the limit value should be greater than the initial value .i can not be equal or less then to the initial value ";
+      
+  }
+
+      
+  }
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//10 to 10000
+//11//121//
+
+
+  
+    
+}
+

@@ -1,0 +1,21 @@
+#include<iostream>
+using namespace std;
+
+
+    
+int main()
+{
+  
+    int i;
+int a[]={12,245,41,4,112,11,15,1,2};//every index has size of 4 and total size of array is 36 u have to devide the total size of array with size of single element
+                                       //toget the total element in the array
+
+int size_n=sizeof(a)/sizeof(a[1]);// here we are getting total elements in arrays
+for(i=0;i<=size_n;i++)
+{
+    cout<<a[i]<<endl;
+    
+}
+ 
+}
+

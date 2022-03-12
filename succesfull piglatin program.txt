@@ -1,0 +1,92 @@
+#include<bits/stdc++.h>
+#include <iostream>
+#include <string.h>
+using namespace std;
+
+
+string getword(string&);
+string trim(string);
+string translatepiglatin(string);
+void toUpper(char *);
+
+
+int main()
+           {
+               string str;//user input sentence
+               string piglatin;// tranlated sentence
+               
+               //get the input
+               cout<<"Enter the sentence which you want to translate in pig latin"<<endl;
+               getline(cin,str);
+               
+               
+               //translate
+               
+               while(str.size()>0)
+               {
+                   //get the word from sentence
+                   
+                   string word=getword(str);
+                   
+                   // translate word into piglatin
+                   word=translatepiglatin(word);
+                   //add the word to translated string
+                   piglatin +=word+" ";
+                   
+                 
+                  
+                       
+               }
+              //converting piglatin to uppercase
+              transform(piglatin.begin(),piglatin.end(),piglatin.begin(), :: toupper);
+              cout<<piglatin<<endl;
+          
+           }
+string getword(string& str)
+{
+    // use trim function to trim down the extra empty spaces from intial address
+    str=trim(str);
+    int i=0;
+    while(str[i] !=' '&& i<str.size())
+        i++;
+        
+        string word=str.substr(0,i);
+        str.erase(0,i);
+        return word;
+}
+string trim(string str)
+{
+   // erase 1 character at index if it is space
+   while(str[0]==' ')
+       str.erase(0,1);
+       return str;
+}
+string translatepiglatin(string word)
+{
+    //get the first character
+    char firstc=word[0];
+    // append firstcharacter to the end of word
+    word.append(1,firstc);
+    //append KPU in the end of the word;
+    word.append("KPU");
+    //delete the first character from word
+    
+    word.erase(0,1);
+    return word;
+    
+    
+}
+
+
+
+void toUpper(char *input) {
+
+    int i = 0;
+    char c;
+    while (input[i])
+    {
+        c = input[i];
+        putchar(toupper(c));
+        i++;
+    }
+}

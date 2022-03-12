@@ -1,0 +1,29 @@
+#include<iostream>
+using namespace std;
+
+void swap(int&,int&);// function to swap two int values
+                    // using refrence to swap the value 
+int main()
+{
+    int a,b ;
+
+    cin>>a>>b;
+
+
+    
+    swap(a,b);
+  
+
+}
+void swap (int& a,int& b)//functionality of upper function
+{
+    int c=0;
+    c=b;
+    b=0;
+    b=a;
+    a=c;
+    
+ cout<<a<<" "<<b;   
+    
+}
+//swap program is working well 

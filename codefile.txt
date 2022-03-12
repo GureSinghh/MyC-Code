@@ -1,0 +1,42 @@
+#include <iostream>
+#include <string.h>
+using namespace std;
+
+
+/////////functions////////
+void toUpper(char *);
+
+
+int main()
+{
+    // storing full sentence through input
+    int i;
+    cout<<"Please Enter the Sentence here"<<endl;
+    const int size=100;
+	 char name[size];
+    cin.getline(name,size);
+    
+   toUpper(name); 
+
+    // giving output 
+   while(i!=size)
+       cout<<name[i];
+       i++;
+    //////////////////////////////////////////////////
+   // transerfer the first letter of sentence in end and add KPU in it .
+
+     
+   
+}
+// converting to uppercase using this function
+void toUpper(char *input) {
+
+    int i = 0;
+    char c;
+    while (input[i])
+    {
+        c = input[i];
+        putchar(toupper(c));
+        i++;
+    }
+}

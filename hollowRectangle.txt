@@ -1,0 +1,51 @@
+#include <iostream>
+using namespace std;
+
+
+int main(){
+    int totalRows;//get input from user about how many rows he/she needed 
+    int total_colum;//same goes for colums
+    
+    cout<<"Enter total number of Rows "<<endl;
+    cin>>totalRows;//geting rows input 
+    cout<<"Enter Total number of colms"<<endl;
+    cin>>total_colum;// getting colum input from user
+    
+    for(int i=1;i<=totalRows;i++)//for loop repeat acc. to total rows data
+    {
+       if(i==1||i==totalRows)//if i=1 or i=max value of totalRows this will run    if-A
+       {
+            if(i==1||i==totalRows)//same condition to run for loop inside 
+        { for(int i=1;i<=total_colum;i++)
+        {
+             cout<<" *";
+        }
+            
+        } 
+       }else{//else this condition will execute       else-A
+        
+        if(i>1&&i<totalRows)//if i greater than 1 and less then maximum number of total Rows this will run next for loop
+        {
+            for(int i=1;i<=total_colum;i++)//this will print total elements in one row 
+            {
+                if(i==1||i==total_colum)//if i=1 or i= maximum number of total_colum it will print '*'on that numbers position
+                {
+                    cout<<" *";
+                }else{//else this will print just a space if condition dosn't met
+                    cout<<"  ";
+                }
+            }
+        }
+       }
+         cout<<endl;
+    }
+    
+        
+}
+
+    
+    
+    
+    
+
+

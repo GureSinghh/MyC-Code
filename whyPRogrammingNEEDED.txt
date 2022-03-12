@@ -1,0 +1,2 @@
+Programming languages allow us to translate the 1s and 0s into something that humans can understand and write.
+ A programming language is made up of a series of symbols that serves as a bridge that allow humans to translate our thoughts into instructions computers can understand.

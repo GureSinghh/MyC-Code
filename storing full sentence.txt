@@ -1,0 +1,22 @@
+#include <iostream>
+#include <string.h>
+using namespace std;
+
+int main()
+{
+    // storing full sentence through input
+    int i;
+    cout<<"Please Enter the Sentence here"<<endl;
+    const int size=10;
+	 char name[size];
+    cin.getline(name,size);
+
+    // giving output 
+   for(i=0;i<=size;i++)
+       cout<<name[i];
+    //////////////////////////////////////////////////
+   // transerfer the first letter of sentence in end and add KPU in it .
+
+     
+   
+}
